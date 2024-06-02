@@ -6,7 +6,7 @@ export default function Home() {
   const [length, setLength] = useState(8); // Default length for better UX
   const [includeNumbers, setIncludeNumbers] = useState(true);
   const [includeSymbols, setIncludeSymbols] = useState(true);
-  const [passwords, setPasswords] = useState([]);
+  const [passwords, setPasswords] = useState<string[]>([]);
 
   const generatePassword = () => {
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -27,7 +27,7 @@ export default function Home() {
     setPasswords(passwordsArray);
   };
 
-  const copyToClipboard = (password) => {
+  const copyToClipboard = (password: string) => {
     navigator.clipboard.writeText(password);
     toast("Password copied to clipboard");
   };
