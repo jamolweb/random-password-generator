@@ -9,6 +9,8 @@ export default function Home() {
   const [passwords, setPasswords] = useState<string[]>([]);
 
   const generatePassword = () => {
+    ym(97459888, "reachGoal", "generate");
+
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (includeNumbers) characters += "0123456789";
     if (includeSymbols) characters += "!@#$%^&*()_+[]{}|;:,.<>?";
